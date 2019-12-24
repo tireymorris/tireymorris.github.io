@@ -12,7 +12,7 @@ Thanks for reading!
 
 ---
 
-## [Datatypes and Variables](https://tirey.me/posts/simple-javascript/01-datatypes-variables/)
+## Datatypes and Variables
 
 - Datatypes (number, string, object, function, boolean, null, undefined), template strings
 
@@ -34,7 +34,7 @@ Thanks for reading!
 
 ---
 
-## [Operators](https://tirey.me/posts/simple-javascript/02-operators/)
+## Operators
 
 - Operators (+, -, \*, /, %, ++, --, +=, -=, \*=, /=, %=)
 

@@ -7,8 +7,8 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 3000,
-    open: true,
-    contentBase: path.join(__dirname, 'dist'),
+    open: false,
+    contentBase: path.join(__dirname, 'docs'),
     watchContentBase: true,
     historyApiFallback: true,
     disableHostCheck: true,
@@ -27,7 +27,6 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/
       },
-      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
         enforce: 'pre',
         test: /\.js$/,
@@ -40,6 +39,14 @@ module.exports = {
       {
         test: /\.md$/,
         use: 'raw-loader'
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: 'file-loader?name=assets/img/[name].[ext]'
+      },
+      {
+        test: /\.html$/,
+        use: 'file-loader?name=[name].[ext]'
       }
     ]
   },
@@ -48,7 +55,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs')
   },
   plugins: [new webpack.EnvironmentPlugin({ ...process.env })]
 };

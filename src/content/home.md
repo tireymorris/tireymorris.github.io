@@ -1,7 +1,4 @@
-+++
-title = "About"
-date = "2019-05-26"
-+++
+<img class="rounded" src="assets/img/headshot.jpg" alt="headshot - Ty Morris" width=200 height=200 />
 
 I'm **Ty Morris**, a Software Engineer in Austin, TX. Here's my [resume](/resume.pdf)!
 
