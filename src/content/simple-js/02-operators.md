@@ -142,7 +142,7 @@ console.log(b); // 1
 ```javascript
 console.log('Hamlet' == 'let Ham;'); // false
 console.log('10' == 10); // true
-console.log(-Infinity ==:Infinity); // true
+console.log(-Infinity == Infinity); // true
 console.log(null == null); // true
 console.log(undefined == null); // true
 ```
@@ -151,7 +151,7 @@ console.log(undefined == null); // true
 
 ```javascript
 console.log('10' === 10); // false
-console.log(-Infinity ===:Infinity); // true
+console.log(-Infinity === Infinity); // true
 console.log(null === null); // true
 console.log(undefined === null); // false
 console.log('JavaScript' === 'JavaScript'); // true

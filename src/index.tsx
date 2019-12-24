@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import './assets/resume.pdf';
 
 import './styles/main.css';
-import './styles/solarized-light.css';
+import './styles/highlight.css';
 
 import '../index.html';
 import './assets/img/headshot.jpg';

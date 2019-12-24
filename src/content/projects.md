@@ -1,3 +1,7 @@
+## [OpenCV Bot](https://github.com/tireymorris/opencvbot)
+
+Computer vision daemon that runs on a raspberry pi (or similarly-equipped computer) and works with a Telegram bot and webcam and send updates when motion is detected.
+
 ## [Tiny Neuron](https://github.com/tireymorris/tinyneuron)
 
 Feed-forward neural network with gradient descent and backpropagation, capable of solving simple problems like XOR and with optimization, potential to solve problems such as image classification
@@ -6,9 +10,9 @@ Feed-forward neural network with gradient descent and backpropagation, capable o
 
 Simple matrix math library used in Tiny Neuron to handle the underlying math of backpropagation and weight/bias tuning
 
-## [Tiny Genesis](https://github.com/tireymorris/tinygenesis)
+## [react-skeleton](https://github.com/tireymorris/react-skeleton)
 
-Neuroevolution library built on the principles of the [NEAT algorithm](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf), developed at UT Austin by Ken Stanley and Risto Miikkulainen
+A project scaffold for minimal React + TypeScript projects, with simple webpack, babel, and prettier configurations
 
 ## [Steganography](https://github.com/tireymorris/steganography)
 
