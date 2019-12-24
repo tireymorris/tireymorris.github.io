@@ -47,6 +47,10 @@ module.exports = {
       {
         test: /\.html$/,
         use: 'file-loader?name=[name].[ext]'
+      },
+      {
+        test: /\.pdf$/,
+        use: 'file-loader?name=assets/[name].[ext]'
       }
     ]
   },

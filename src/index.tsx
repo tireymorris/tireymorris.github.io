@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import './assets/resume.pdf';
+
 import './styles/main.css';
 import './styles/solarized-light.css';
 

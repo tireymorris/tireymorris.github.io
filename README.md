@@ -1,3 +1,3 @@
-# react-skeleton
+# tireymorris.github.io
 
-A project skeleton for React
+My portfolio, hosted at tirey.me
