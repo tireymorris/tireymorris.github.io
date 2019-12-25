@@ -1,33 +1,43 @@
-import React from 'react';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { h } from 'preact';
+
+import Router from 'preact-router';
+import { createHashHistory } from 'history';
+import { Link } from 'preact-router/match';
 
 import Home from './Home';
 import Posts from './Posts';
 import Projects from './Projects';
 
 const App = () => (
-  <Router>
+  <div id="root">
     <div id="content">
       <nav className="horizontal">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link activeClassName="active" href="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/posts">Posts</Link>
+            <Link activeClassName="active" href="/posts">
+              Posts
+            </Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link activeClassName="active" href="/projects">
+              Projects
+            </Link>
           </li>
         </ul>
       </nav>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/posts" component={Posts} />
-        <Route path="/projects" component={Projects} />
-      </Switch>
+      <Router history={createHashHistory()}>
+        <Home path="/" />
+        <Posts path="/posts" />
+        <Posts path="/posts/:id" />
+        <Projects path="/projects" />
+      </Router>
     </div>
-  </Router>
+  </div>
 );
 
 export default App;

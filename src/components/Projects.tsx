@@ -1,6 +1,10 @@
-import React from 'react';
+import { h } from 'preact';
 import Markdown from './Markdown';
 
-const Projects = () => <Markdown path="projects.md" />;
+type Props = {
+  path: string;
+};
+
+const Projects = (props: Props) => <Markdown filepath="projects.md" />;
 
 export default Projects;

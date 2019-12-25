@@ -1,16 +1,28 @@
-import React, { useEffect } from 'react';
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import marked from 'marked';
-import hljs from 'highlight.js';
 
-const Markdown = (props: { path: string }) => {
+const Markdown = (props: { filepath: string; path?: string }) => {
+  const [hljs, setHljs] = useState(null as any);
+
   useEffect(() => {
-    document
-      .querySelectorAll('pre code')
-      .forEach(block => hljs.highlightBlock(block));
-  }, [props.path]);
+    import(/* webpackChunkName: "highlight.js" */ 'highlight.js').then(
+      ({ default: hjs }) => {
+        setHljs(hjs);
+      }
+    );
+  }, []);
 
-  const { path } = props;
-  const markdownSrc = require(`../content/${path}`).default;
+  useEffect(() => {
+    if (hljs) {
+      document
+        .querySelectorAll('pre code')
+        .forEach(block => hljs.highlightBlock(block));
+    }
+  }, [props.path, hljs]);
+
+  const { filepath } = props;
+  const markdownSrc = require(`../content/${filepath}`).default;
   return (
     <div
       className="post"

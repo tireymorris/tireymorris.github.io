@@ -1,56 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import { h } from 'preact';
 import Markdown from './Markdown';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-type pathType = { path: string; isExact: boolean };
-type matchType = { match: pathType };
+import Router from 'preact-router';
+import { createHashHistory } from 'history';
+import Match, { Link } from 'preact-router/match';
 
-const Posts = ({ match }: matchType) => {
-  const { path, isExact } = match;
+type matchType = { matches: boolean; path: string };
 
-  const [postSelected, setPostSelected] = useState(false);
-  const CustomLink = (props: any) => (
-    <Link onClick={() => setPostSelected(true)} {...props} />
-  );
-
-  console.log(match);
-
-  return (
-    <div style={{ width: '100%' }}>
-      {isExact && (
-        <nav className="column">
-          <ul>
-            <li>
-              <CustomLink to={`${path}/simple-js-02-operators`}>
-                Simple Javascript - Operators
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink to={`${path}/simple-js-01-datatypes-variables`}>
-                Simple Javascript - Datatypes & Variables
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink to={`${path}/simple-js-0-intro`}>
-                Simple Javascript - Intro
-              </CustomLink>
-            </li>
-          </ul>
-        </nav>
-      )}
-      <Switch>
-        <Route path={`${path}/simple-js-0-intro`}>
-          <Markdown path="simple-js/0-intro" />
-        </Route>
-        <Route path={`${path}/simple-js-01-datatypes-variables`}>
-          <Markdown path="simple-js/01-datatypes-variables" />
-        </Route>
-        <Route path={`${path}/simple-js-02-operators`}>
-          <Markdown path="simple-js/02-operators" />
-        </Route>
-      </Switch>
-    </div>
-  );
+type Props = {
+  path: string;
 };
+
+const Posts = (props: Props) => (
+  <Match path="/posts">
+    {({ matches, path }: matchType) => {
+      console.log(matches, path);
+      return (
+        <div style={{ width: '100%' }}>
+          {matches && (
+            <nav className="column">
+              <ul>
+                <li>
+                  <Link
+                    activeClassName="active"
+                    href={`${path}/simple-js-02-operators`}
+                  >
+                    Simple Javascript - Operators
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClassName="active"
+                    href={`${path}/simple-js-01-datatypes-variables`}
+                  >
+                    Simple Javascript - Datatypes & Variables
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClassName="active"
+                    href={`${path}/simple-js-0-intro`}
+                  >
+                    Simple Javascript - Intro
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          )}
+          <Router history={createHashHistory()}>
+            <Markdown
+              path="/posts/simple-js-0-intro"
+              filepath="simple-js/0-intro"
+            />
+            <Markdown
+              path={`/posts/simple-js-01-datatypes-variables`}
+              filepath="simple-js/01-datatypes-variables"
+            />
+            <Markdown
+              path={`/posts/simple-js-02-operators`}
+              filepath="simple-js/02-operators"
+            />
+          </Router>
+        </div>
+      );
+    }}
+  </Match>
+);
 
 export default Posts;

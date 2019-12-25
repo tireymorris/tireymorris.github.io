@@ -3,23 +3,6 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'inline-source-map',
-  mode: 'development',
-  devServer: {
-    port: 3000,
-    open: false,
-    contentBase: path.join(__dirname, 'docs'),
-    watchContentBase: true,
-    historyApiFallback: true,
-    disableHostCheck: true,
-    stats: 'errors-only',
-    overlay: true,
-    hotOnly: true,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    }
-  },
   module: {
     rules: [
       {
@@ -59,6 +42,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'docs')
   },
   plugins: [new webpack.EnvironmentPlugin({ ...process.env })]
