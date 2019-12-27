@@ -2,7 +2,7 @@
   {
     "name": "Home",
     "id": "",
-    "filepath": "home.md"
+    "filepath": "content/home.md"
   },
   {
     "name": "Posts",
@@ -11,23 +11,23 @@
       {
         "name": "Simple Javascript - Operators",
         "id": "simple-js-02-operators",
-        "filepath": "simple-js/02-operators"
+        "filepath": "content/simple-js/02-operators.md"
       },
       {
         "name": "Simple Javascript - Datatypes & Variables",
         "id": "simple-js-01-datatypes-variables",
-        "filepath": "simple-js/01-datatypes-variables"
+        "filepath": "content/simple-js/01-datatypes-variables.md"
       },
       {
         "name": "Simple Javascript - Intro",
         "id": "simple-js-0-intro",
-        "filepath": "simple-js/0-intro"
+        "filepath": "content/simple-js/0-intro.md"
       }
     ]
   },
   {
     "name": "Projects",
     "id": "projects",
-    "filepath": "projects.md"
+    "filepath": "content/projects.md"
   }
 ]
