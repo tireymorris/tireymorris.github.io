@@ -1,6 +1,6 @@
 <img id="headshot" class="rounded" src="assets/img/headshot.jpg" alt="headshot - Ty Morris" width=200 height=200 />
 
-I'm **Ty Morris**, a Software Engineer in Austin, TX. Here's my [resume](/assets/resume.pdf)!
+I'm **Ty Morris**, a Software Engineer in Austin, TX. Here's my <a href="/assets/resume.pdf" target="_blank">resume</a>!
 
 I specialize in full-stack development, primarily with React or Preact on the frontend, and Python and Ruby on Rails on the backend.
 
