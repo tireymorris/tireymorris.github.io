@@ -7,39 +7,7 @@ import { Link } from 'preact-router/match';
 import Posts from './Posts';
 import Markdown from './Markdown';
 
-const pages = [
-  {
-    name: 'Home',
-    id: '',
-    filepath: 'home.md'
-  },
-  {
-    name: 'Posts',
-    id: 'posts',
-    posts: [
-      {
-        name: 'Simple Javascript - Operators',
-        id: 'simple-js-02-operators',
-        filepath: 'simple-js/02-operators'
-      },
-      {
-        name: 'Simple Javascript - Datatypes & Variables',
-        id: 'simple-js-01-datatypes-variables',
-        filepath: 'simple-js/01-datatypes-variables'
-      },
-      {
-        name: 'Simple Javascript - Intro',
-        id: 'simple-js-0-intro',
-        filepath: 'simple-js/0-intro'
-      }
-    ]
-  },
-  {
-    name: 'Projects',
-    id: 'projects',
-    filepath: 'projects.md'
-  }
-];
+import pages from '../../pages.json';
 
 const App = () => (
   <div id="root">

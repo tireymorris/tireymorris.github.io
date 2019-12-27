@@ -29,11 +29,9 @@ const Posts = (props: { path: string; posts: Post[] }) => (
           </nav>
         )}
         <Router history={createHashHistory()}>
-          {props.posts.map(({ id, filepath }) => {
-            console.log(id);
-
-            return <Markdown path={`posts/${id}`} filepath={filepath} />;
-          })}
+          {props.posts.map(({ id, filepath }) => (
+            <Markdown path={`posts/${id}`} filepath={filepath} />
+          ))}
         </Router>
       </Fragment>
     )}
