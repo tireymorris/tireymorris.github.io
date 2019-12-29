@@ -9,6 +9,11 @@
     "id": "posts",
     "posts": [
       {
+        "name": "How to build a blog with propolis.js",
+        "id": "propolis",
+        "filepath": "content/posts/0-propolis.md"
+      },
+      {
         "name": "Simple Javascript - Operators",
         "id": "simple-js-02-operators",
         "filepath": "content/simple-js/02-operators.md"
