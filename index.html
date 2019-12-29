@@ -8,20 +8,20 @@
   </head>
   <body>
     <div id="root"></div>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.2/build/main.bundle.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
-  <script>
-    window.setTimeout(() => {
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('type', 'text/css');
-      link.setAttribute(
-        'href',
-        'https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@master/src/styles/solarized-light.css'
-      );
+    <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.3/build/main.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+    <script>
+      window.setTimeout(() => {
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('type', 'text/css');
+        link.setAttribute(
+          'href',
+          'https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@master/src/styles/solarized-light.css'
+        );
 
-      document.querySelector('head').appendChild(link);
-    }, 250);
-  </script>
+        document.querySelector('head').appendChild(link);
+      }, 250);
+    </script>
+  </body>
 </html>
