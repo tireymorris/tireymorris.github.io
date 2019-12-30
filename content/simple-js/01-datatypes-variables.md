@@ -1,8 +1,10 @@
+# Simple JS - Datatypes & Variables
+
 Hi! Welcome to the first entry in a series of tutorial articles on JavaScript, done the simple way. In this series we'll be exploring the fundamentals of the language as well as some more advanced facets in the later articles. This will be the first in the "fundamentals" of the language designed to get us ready to check out more advanced topics.
 
 In this entry we'll be learning about JavaScript's data types and operators in addition to some fundamentals like variables and comments. Let's get into it!
 
-## Datatypes
+### Datatypes
 
 JavaScript has seven basic types - `number`, `string`, `boolean`, `object`, `function`, `null`, and `undefined`. We'll explore each of these in detail below.
 
@@ -53,7 +55,7 @@ result = 'success';
 console.log(result); // "success"
 ```
 
-## Comments
+### Comments
 
 Comments are, intuitively, comments that the programmer leaves in the code for other programmers to read. They aren't printed or captured in any variables, and are purely for the benefit of those reading your code. There are two types of comments: _inline_ comments begin with `//` and take up a single line, and _multi-line comments_, beginning with `/*` and ending with `*/`, which, as the name implies, span multiple lines. All the text between the beginning and end of a comment is ignored.
 
@@ -65,7 +67,7 @@ console.log('This line is executed');
 */
 ```
 
-## ASCII and strings
+### ASCII and strings
 
 Since the late '60s, computers have represented characters in memory by using a specific encoding of numbers to characters. This encoding is called ASCII, and the most recent revision has 256 possible values (8 bits) per character, with `A` through `Z` occupying codes `65` through `90` and `a` through `z` occupying codes `97` through `122`. Although we use Unicode now to represent character encodings, the scheme for the first 8 bits has stayed essentially the same as in ASCII.
 
@@ -79,7 +81,7 @@ const _97 = 'a'.charCodeAt(0);
 console.log(_97); //97
 ```
 
-## Escape sequences
+### Escape sequences
 
 Certain characters need a special representation inside a string in order to be displayed correctly. Common characters like this include tabs (`\t`), newlines (`\n`), carriage-returns (`\r`), and single/double quotes (`\'` / `\"`). If you want to display the backslash itself, you'll need to escape it too (`\\`). Additionally, the quotes used to delimit a string can't be used inside a string without escaping them:
 
@@ -90,7 +92,7 @@ const invalidTitle = ' 'The Walrus and the Carpenter' '; // invalid
 const compromiseTitle = ' \'The Walrus and the Carpenter\' '; // valid
 ```
 
-## Template strings
+### Template strings
 
 Template strings are special strings denoted by the backtick, that can be used to capture variable and expression values.
 
@@ -104,7 +106,7 @@ console.log(resultOne);
 console.log(resultTwo);
 ```
 
-## Variables
+### Variables
 
 Variables are a sort of container that hold data in a program. They can be reused as values passed to functions or used in computations, and have a name that often refers to their significance in the program or application. Variable names in JavaScript can begin with letters or an underscore, and the remaining characters can include any letter, number, or an underscore. There's no limit to the length of a variable name, but in general keeping them short but descriptive is a good rule of thumb. Variables are _declared_ using the keyword `let`, `const`, or `var`, and _assigned_ using the `=` operator.
 
@@ -142,7 +144,7 @@ console.log(j); // printing j throws a ReferenceError
 
 Numeric literals are most often used to represent decimal (base-10) values, but JavaScript numbers can also represent boolean (base-2) values, hexadecimal (base-16), and octal (base-8). In a number literal with base `x`, each digit from right to left represents an increasing power of `x`. In decimal, for example, `123 = 1*100 + 2*10 + 3*1`. In boolean, the only valid digits are 0 and 1, and these literals are written like `0b1010` (10). Hexadecimal digits range between 0 and 15, and digits 10-15 are represented by the characters A, B, C, D, E, and F, respectively. Hex literals look like `0xF` (15) or `0x2A` (42). Octal digits range between 0 and 7, and literals are written like `0o10` (8) or `0o21` (17).
 
-## typeof
+### typeof
 
 Typeof is an operator that _returns_ a string representing the type of a variable.
 

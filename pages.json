@@ -9,22 +9,27 @@
     "id": "posts",
     "posts": [
       {
+        "name": "Simple JS - Functions",
+        "id": "simple-js-03-functions",
+        "filepath": "content/simple-js/03-functions.md"
+      },
+      {
         "name": "How to build a blog with propolis.js",
         "id": "propolis",
         "filepath": "content/posts/0-propolis.md"
       },
       {
-        "name": "Simple Javascript - Operators",
+        "name": "Simple JS - Operators",
         "id": "simple-js-02-operators",
         "filepath": "content/simple-js/02-operators.md"
       },
       {
-        "name": "Simple Javascript - Datatypes & Variables",
+        "name": "Simple JS - Datatypes & Variables",
         "id": "simple-js-01-datatypes-variables",
         "filepath": "content/simple-js/01-datatypes-variables.md"
       },
       {
-        "name": "Simple Javascript - Intro",
+        "name": "Simple JS - Intro",
         "id": "simple-js-0-intro",
         "filepath": "content/simple-js/0-intro.md"
       }
