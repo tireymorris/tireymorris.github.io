@@ -38,10 +38,10 @@ The file has the the following format:
 
 Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages (but not particular posts). The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
 
-```javascript
+```jsx
 const ChildRoute = ({ page }) => {
   if (page.posts && page.posts.length > 0) {
-    return <Posts path='/posts/:id?' posts={page.posts} />;
+    return <Posts path="/posts/:id?" posts={page.posts} />;
   } else if (page.filepath && page.filepath.length > 0) {
     return <Markdown path={`/${page.id}`} filepath={page.filepath} />;
   }
@@ -67,17 +67,17 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchPages()
+    fetchPages();
   }, []);
 
   return (
-    <div id='root'>
-      <div id='content'>
-        <nav className='horizontal'>
+    <div id="root">
+      <div id="content">
+        <nav className="horizontal">
           <ul>
             {pages.map(page => (
               <li>
-                <Link activeClassName='active' href={`/${page.id}`}>
+                <Link activeClassName="active" href={`/${page.id}`}>
                   {page.name}
                 </Link>
               </li>
@@ -85,7 +85,7 @@ const App = () => {
           </ul>
         </nav>
         <Router history={createHashHistory()}>
-          {pages.map(page => <ChildRoute page={page}></ChildRoute>}
+          {pages.map(page => <ChildRoute page={page}>)}
         </Router>
       </div>
     </div>
@@ -97,15 +97,15 @@ The Posts component is rendered whenever the `pages.json` encounters nested rout
 
 ```jsx
 const Posts = (props: { path: string, posts: Post[] }) => (
-  <Match path='/posts'>
+  <Match path="/posts">
     {({ matches, path }: { matches: boolean, path: string }) => (
       <Fragment>
         {matches && (
-          <nav className='column'>
+          <nav className="column">
             <ul>
               {props.posts.map(({ name, id }) => (
                 <li style={{ paddingBottom: '8px' }} key={id}>
-                  <Link activeClassName='active' href={`${path}/${id}`}>
+                  <Link activeClassName="active" href={`${path}/${id}`}>
                     {name}
                   </Link>
                 </li>
