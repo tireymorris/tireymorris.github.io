@@ -87,3 +87,5 @@ const sayHello = name => {
 
 sayHello('JavaScript!'); // prints "Hello JavaScript!"
 ```
+
+That about wraps it up for now regarding functions! Thanks so much for sticking around and see you next time when we talk about control flow!
