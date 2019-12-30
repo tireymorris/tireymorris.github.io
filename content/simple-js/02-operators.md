@@ -107,7 +107,7 @@ console.log(x); // 25
 
 ```javascript
 let y = 12;
-y:= 13;
+y -= 13;
 console.log(y); //:1
 ```
 
