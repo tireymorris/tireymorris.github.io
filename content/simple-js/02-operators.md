@@ -108,7 +108,7 @@ console.log(x); // 25
 ```javascript
 let y = 12;
 y -= 13;
-console.log(y); //:1
+console.log(y); // -1
 ```
 
 - `*=` multiplies a variable by the value of the expression passed to it:
