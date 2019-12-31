@@ -4,7 +4,7 @@ Hello!
 
 In this post we'll be examining the operators in JavaScript and the types to which they apply, as well as comparisons, logic, thruthiness and falsiness, and bitwise operations. This is the second in a series of "fundamentals" which are preparatory for the more advanced content forthcoming.
 
-### Operators
+## Operators
 
 Operators are symbols that perform operations on variables or values. There are quite a few of them, but they all follow the same general patterns. With regard to _precedence_, there is a ranking that defines which operators are applied before others, which becomes important when dealing with expressions containing many operators. The basics are derived from PEMDAS, which you were likely exposed to in elementary school. Essentially, parentheses happens before multiplication and division, which happens before addition and subtraction. However, we have several more operators here to deal with. Their precedence is as follows:
 
@@ -22,7 +22,7 @@ Operators are symbols that perform operations on variables or values. There are 
 12. Bitwise NOT, Logical NOT (`~`, `!`)
 13. Postfix Increment/Decrement (`x++`, `x--`)
 
-### Arithmetic Operators
+## Arithmetic Operators
 
 - `+` is used to add two numbers or _concatenate_ two strings:
 
@@ -93,7 +93,7 @@ console.log(y); // 19
 console.log(--y); // 18
 ```
 
-### Assignment Operators
+## Assignment Operators
 
 - `=` is the assignment operator, as we've seen before. It _assigns_, or _binds_, the value of an expression to a variable.
 
@@ -137,7 +137,7 @@ b %= 10;
 console.log(b); // 1
 ```
 
-### Comparison Operators
+## Comparison Operators
 
 - `==` returns true if its left and right arguments are equal, and false otherwise.
 
@@ -188,7 +188,7 @@ console.log('Zebra' > 'mammoth'); // false
 
 - `<=` returns true if its left argument is less than or equal to its right.
 
-### Logical Operators
+## Logical Operators
 
 - `&&` returns true if both its left and right arguments are true.
 
@@ -217,7 +217,7 @@ console.log(!(true && false)); // true
 console.log(!(false || true)); // false
 ```
 
-### Truthy and falsy values
+## Truthy and falsy values
 
 In JavaScript, although only booleans truly hold the values `true` or `false`, all values are either _truthy_ or _falsy_: that is, they can be evaluated as though they were booleans. The rules for this in general are that if a value is not `null`, `undefined`, `0`, the empty string `""`/`''`, or `NaN`, the value is considered to be truthy. If it's in the aforementioned set of values, it's considered to be falsy.
 
@@ -229,7 +229,7 @@ console.log(NaN && true); // NaN
 // etc
 ```
 
-### Bitwise Operators
+## Bitwise Operators
 
 - `&` (Bitwise AND) returns a new number whose bits are `1` in the places where its left and right arguments both have a `1`.
 

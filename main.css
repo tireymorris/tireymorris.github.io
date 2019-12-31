@@ -1,0 +1,44 @@
+body {
+  background-color: #313d5a;
+}
+
+#content {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  color: #69a297;
+}
+
+a {
+  text-decoration: none;
+  color: #50808e;
+}
+
+pre code {
+  font-family: 'Source Code Pro', monospace !important;
+  font-size: 11px;
+  width: 80vw;
+}
+
+nav.horizontal ul {
+  display: flex;
+  justify-content: space-between;
+  width: 175px;
+}
+
+nav.horizontal ul li {
+  margin-right: 0px;
+}
+
+/* Only for large screens  */
+@media screen and (min-width: 500px) {
+  pre code {
+    font-size: 14px;
+  }
+}
+
+/* Only for small screens */
+@media screen and (max-width: 500px) {
+  pre code {
+    width: 90vw;
+  }
+}

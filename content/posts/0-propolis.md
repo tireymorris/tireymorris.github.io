@@ -2,7 +2,7 @@
 
 [propolis](https://github.com/tireymorris/propolis) is a Markdown-focused blog platform built in [Preact](https://preactjs.com/), with [preact-router](https://github.com/preactjs/preact-router) handling the hash routing, and [highlight.js](https://highlightjs.org/) providing syntax highlighting. It allows you to write all your content in Markdown, and the only code required is an `index.html` file and a simple json manifest file that must be called `pages.json`, both located in the same directory.
 
-### Installation
+## Installation
 
 In your `index.html`, include the following scripts:
 
@@ -26,7 +26,7 @@ In your `index.html`, include the following scripts:
 </body>
 ```
 
-### Configuration
+## Configuration
 
 In the root of your web directory, create a `pages.json` manifest file which tells propolis where to find and route your content.
 
@@ -49,7 +49,7 @@ The file has the the following format:
 ]
 ```
 
-### How it works
+## How it works
 
 Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages (but not particular posts). The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
 
