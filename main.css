@@ -52,4 +52,16 @@ nav.horizontal ul li {
   hr {
     width: 100%;
   }
+
+  .post {
+    align-items: start;
+  }
+
+  .post h2 {
+    align-self: center;
+  }
+
+  .post h1 {
+    align-self: center;
+  }
 }

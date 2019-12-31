@@ -52,9 +52,11 @@ Thanks for reading!
 
 - Functions
 
-- Arrow functions, anonymous functions
+- Anonymous functions
 
-- call, bind, apply
+- Arrow functions
+
+- call
 
 ---
 
@@ -78,7 +80,7 @@ Thanks for reading!
 
 - Spread/rest operator
 
-- call
+- bind
 
 - apply
 
