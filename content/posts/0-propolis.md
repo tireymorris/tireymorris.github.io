@@ -1,4 +1,4 @@
-### How to build a blog with propolis.js
+# How to build a blog with propolis.js
 
 [propolis](https://github.com/tireymorris/propolis) is a Markdown-focused blog platform built in [Preact](https://preactjs.com/), with [preact-router](https://github.com/preactjs/preact-router) handling the hash routing, and [highlight.js](https://highlightjs.org/) providing syntax highlighting. It allows you to write all your content in Markdown, and the only code required is an `index.html` file and a simple json manifest file that must be called `pages.json`, both located in the same directory.
 
@@ -7,8 +7,23 @@
 In your `index.html`, include the following scripts:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/propolis@0.3.3/build/main.bundle.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/highlight.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.css"
+  />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+</body>
 ```
 
 ### Configuration
