@@ -13,6 +13,10 @@ a {
   color: #50808e;
 }
 
+p code {
+  background-color: #545757;
+}
+
 pre code {
   font-family: 'Source Code Pro', monospace !important;
   font-size: 11px;
