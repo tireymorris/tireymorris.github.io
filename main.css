@@ -64,4 +64,8 @@ nav.horizontal ul li {
   .post h1 {
     align-self: center;
   }
+
+  .post pre {
+    align-self: center;
+  }
 }
