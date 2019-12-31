@@ -2,26 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta naame="viewport" content="width=device-width,initial-scale=1.0" />
     <base href="/" />
     <title>Ty Morris</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@master/src/styles/solarized-light.css"
+    />
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.5/build/main.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
-    <script>
-      window.setTimeout(() => {
-        const link = document.createElement('link');
-        link.setAttribute('rel', 'stylesheet');
-        link.setAttribute('type', 'text/css');
-        link.setAttribute(
-          'href',
-          'https://cdn.jsdelivr.net/gh/highlightjs/highlight.js@master/src/styles/solarized-light.css'
-        );
-
-        document.querySelector('head').appendChild(link);
-      }, 250);
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/vendors~highlight.js.bundle.js"></script>
   </body>
 </html>
