@@ -21,8 +21,8 @@ In your `index.html`, include the following scripts:
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
 </body>
 ```
 
