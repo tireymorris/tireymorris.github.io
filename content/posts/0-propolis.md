@@ -51,17 +51,25 @@ The file has the the following format:
 
 ## How it works
 
-Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages (but not particular posts). The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
+Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages and posts. The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
 
 ```jsx
-const ChildRoute = ({ page }) => {
-  if (page.posts && page.posts.length > 0) {
-    return <Posts path="/posts/:id?" posts={page.posts} />;
-  } else if (page.filepath && page.filepath.length > 0) {
+const childRoutes = page => [
+  pages.map(page => {
+    // need two loops here because Fragments don't work with preact-router
+    if (page.posts && page.posts.length > 0) {
+      return <Posts path={`/${page.id}`} posts={page.posts} />;
+    }
+  }),
+  pages.map(page => {
+    if (page.posts && page.posts.length > 0) {
+      return page.posts.map(({ id, filepath }) => (
+        <Markdown path={`/${page.id}/${id}`} filepath={filepath} />
+      ));
+    }
     return <Markdown path={`/${page.id}`} filepath={page.filepath} />;
-  }
-  return <div />;
-};
+  })
+];
 ```
 
 ```jsx
@@ -99,9 +107,7 @@ const App = () => {
             ))}
           </ul>
         </nav>
-        <Router history={createHashHistory()}>
-          {pages.map(page => <ChildRoute page={page}>)}
-        </Router>
+        <Router history={createHashHistory()}>{...childRoutes(pages)}</Router>
       </div>
     </div>
   );
