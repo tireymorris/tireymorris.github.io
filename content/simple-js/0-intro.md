@@ -12,7 +12,7 @@ Thanks for reading!
 
 ---
 
-## [Datatypes and Variables](/#/posts/simple-js-01-datatypes-variables)
+<h2 id="datatypes-variables"><a href="/#/posts/simple-js-01-datatypes-variables" target="_blank">Datatypes and Variables</a></h2>
 
 - Datatypes (number, string, object, function, boolean, null, undefined), template strings
 
@@ -34,7 +34,7 @@ Thanks for reading!
 
 ---
 
-## [Operators](/#/posts/simple-js-02-operators)
+<h2 id="operators"><a href="/#/posts/simple-js-02-operators" target="_blank">Operators</a></h2>
 
 - Operators (+, -, \*, /, %, ++, --, +=, -=, \*=, /=, %=)
 
@@ -48,8 +48,7 @@ Thanks for reading!
 
 ---
 
-## [Functions](/#/posts/simple-js-03-functions)
-
+<h2 id="functions"><a href="/#/posts/simple-js-03-functions" target="_blank">Functions</a></h2>
 - Functions
 
 - Anonymous functions
@@ -61,6 +60,8 @@ Thanks for reading!
 ---
 
 ## Control Flow
+
+<!-- <h2 id="control-flow"><a href="/#/posts/simple-js-04-control-flow" target="_blank">Control Flow</a></h2> -->
 
 - Conditionals (if, else if, else, ternary)
 
