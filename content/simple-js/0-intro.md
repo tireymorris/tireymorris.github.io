@@ -12,7 +12,7 @@ Thanks for reading!
 
 ---
 
-## [Datatypes and Variables](/posts/simple-js-01-datatypes-variables)
+## [Datatypes and Variables](/#/posts/simple-js-01-datatypes-variables)
 
 - Datatypes (number, string, object, function, boolean, null, undefined), template strings
 
@@ -34,7 +34,7 @@ Thanks for reading!
 
 ---
 
-## [Operators](/posts/simple-js-02-operators)
+## [Operators](/#/posts/simple-js-02-operators)
 
 - Operators (+, -, \*, /, %, ++, --, +=, -=, \*=, /=, %=)
 
@@ -48,7 +48,7 @@ Thanks for reading!
 
 ---
 
-## [Functions](/posts/simple-js-03-functions)
+## [Functions](/#/posts/simple-js-03-functions)
 
 - Functions
 
