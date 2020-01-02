@@ -49,6 +49,7 @@ Thanks for reading!
 ---
 
 <h2 id="functions"><a href="/#/posts/simple-js-03-functions" target="_blank">Functions</a></h2>
+
 - Functions
 
 - Anonymous functions
