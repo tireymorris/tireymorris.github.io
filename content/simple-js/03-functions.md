@@ -2,7 +2,7 @@
 
 Welcome back to Simple JS! After a hiatus I've returned to talk to you a bit about a very special topic - functions. These reusable chunks of code form much of the basis for modular program design, and allow you to save lots of time writing redundant code - and can even make your programs look nice and clean! Let's get into it.
 
-### Functions
+## Functions
 
 Functions are one of the seven basic types in JavaScript. You might remember the basics from math class. Although there are different classifications for how these inputs and outputs differ, essentially a function is a mapping from a set of inputs from a set of outputs. The `square` button on a calculator, for instance, is a function that operates on a `number` and returns a `number`. In JavaScript, it might look something like this:
 
@@ -40,7 +40,7 @@ console.log(apply_fn(square, 4)); // 16
 
 See what happened there? We actually passed the function `square` as an argument to the other function `apply_function`, which returned the value produced by invoking `square`! This functionality will be a key part of the JavaScript utility belt, and will be invaluable in many cases in the future. Keep it in mind!
 
-### Anonymous functions
+## Anonymous functions
 
 Anonymous functions are simply unnamed functions. The biggest use for them is as arguments to other functions. For example,
 
@@ -62,7 +62,7 @@ const printSecretMessage = function() {
 setTimeout(printSecretMessage, 1500);
 ```
 
-### Arrow functions
+## Arrow functions
 
 Arrow functions are "syntactic sugar" on top of defining anonymous functions. They can be held within variables or passed as arguments just as anonymous functions are, but have a slightly simpler and cleaner syntax:
 

@@ -1,0 +1,24 @@
+.rounded {
+  border-radius: 100px;
+}
+
+body {
+  background-color: #313d5a;
+}
+
+pre code {
+  font-family: 'Source Code Pro', monospace !important;
+}
+
+#content {
+  font-family: 'Source Code Pro', monospace;
+  color: #69a297;
+}
+
+a {
+  color: #89b6a5;
+}
+
+p code {
+  background-color: #545757;
+}

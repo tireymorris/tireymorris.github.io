@@ -1,17 +1,32 @@
-### How to build a blog with propolis.js
+# How to build a blog with propolis.js
 
 [propolis](https://github.com/tireymorris/propolis) is a Markdown-focused blog platform built in [Preact](https://preactjs.com/), with [preact-router](https://github.com/preactjs/preact-router) handling the hash routing, and [highlight.js](https://highlightjs.org/) providing syntax highlighting. It allows you to write all your content in Markdown, and the only code required is an `index.html` file and a simple json manifest file that must be called `pages.json`, both located in the same directory.
 
-### Installation
+## Installation
 
 In your `index.html`, include the following scripts:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/propolis@0.3.3/build/main.bundle.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+<head>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/highlight.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.css"
+  />
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
+</body>
 ```
 
-### Configuration
+## Configuration
 
 In the root of your web directory, create a `pages.json` manifest file which tells propolis where to find and route your content.
 
@@ -34,19 +49,56 @@ The file has the the following format:
 ]
 ```
 
-### How it works
+For example,
 
-Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages (but not particular posts). The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
+```
+[
+  {
+    "name": "Home",
+    "id": "", // empty string means index route
+    "filepath": "home.md"
+  },
+  {
+    "name": "Posts",
+    "id": "posts",
+    "posts": [
+      {
+        "name": "Hello World Post",
+        "id": "hello-world",
+        "filepath": "posts/hello.md"
+      }
+    ]
+  },
+  {
+    "name": "Projects",
+    "id": "projects",
+    "filepath": "projects.md"
+  }
+]
+
+```
+
+## How it works
+
+Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages and posts. The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
 
 ```jsx
-const ChildRoute = ({ page }) => {
-  if (page.posts && page.posts.length > 0) {
-    return <Posts path="/posts/:id?" posts={page.posts} />;
-  } else if (page.filepath && page.filepath.length > 0) {
+const childRoutes = page => [
+  pages.map(page => {
+    // need two loops here because Fragments don't work with preact-router
+    if (page.posts && page.posts.length > 0) {
+      return <Posts path={`/${page.id}`} posts={page.posts} />;
+    }
+  }),
+  pages.map(page => {
+    if (page.posts && page.posts.length > 0) {
+      return page.posts.map(({ id, filepath }) => (
+        <Markdown path={`/${page.id}/${id}`} filepath={filepath} />
+      ));
+    }
     return <Markdown path={`/${page.id}`} filepath={page.filepath} />;
-  }
-  return <div />;
-};
+  })
+];
 ```
 
 ```jsx
@@ -84,9 +136,7 @@ const App = () => {
             ))}
           </ul>
         </nav>
-        <Router history={createHashHistory()}>
-          {pages.map(page => <ChildRoute page={page}>)}
-        </Router>
+        <Router history={createHashHistory()}>{...childRoutes(pages)}</Router>
       </div>
     </div>
   );
