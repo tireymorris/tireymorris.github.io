@@ -2,7 +2,7 @@
 
 I'm **Ty Morris**, a Software Engineer in Austin, TX. Here's my <a href="/assets/resume.pdf" target="_blank">resume</a>!
 
-I specialize in full-stack development, primarily with React or Preact on the frontend, and Python and Ruby on Rails on the backend.
+I specialize in full-stack development, primarily with React or Preact on the frontend, and Python or Rails on the backend.
 
 I attended the University of Texas at Austin from 2014 to 2017 and received a B.S. in Computer Science.
 
