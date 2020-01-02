@@ -49,6 +49,35 @@ The file has the the following format:
 ]
 ```
 
+For example,
+
+```
+[
+  {
+    "name": "Home",
+    "id": "", // empty string means index route
+    "filepath": "home.md"
+  },
+  {
+    "name": "Posts",
+    "id": "posts",
+    "posts": [
+      {
+        "name": "Hello World Post",
+        "id": "hello-world",
+        "filepath": "posts/hello.md"
+      }
+    ]
+  },
+  {
+    "name": "Projects",
+    "id": "projects",
+    "filepath": "projects.md"
+  }
+]
+
+```
+
 ## How it works
 
 Propolis' `index.ts` file renders the App component directly, which in turn fetches the `pages.json` file and renders both links to the pages as well as setting up the routes for the pages and posts. The `path` attribute is a sort of magic that `preact-router` expects in order to know which component to render, and is matched automatically against the page URL.
