@@ -11,18 +11,18 @@ In your `index.html`, include the following scripts:
   <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/highlight.css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.11/build/highlight.css"
   />
   <link
     rel="stylesheet"
     type="text/css"
-    href="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.css"
+    href="https://cdn.jsdelivr.net/npm/propolis@0.3.11/build/main.css"
   />
 </head>
 
 <body>
   <script src="https://cdn.jsdelivr.net/npm/propolis/build/vendors~highlight.js.bundle.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.6/build/main.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/propolis@0.3.11/build/main.bundle.js"></script>
 </body>
 ```
 
