@@ -140,7 +140,7 @@ console.log(j); // printing j throws a ReferenceError
 
 - `var` is similar to `let` in that a variable declared with `var` can be reassigned later. However, in modern JavaScript, it is common to prefer `let` to `var` because the latter is _hoisted_ outside of block scope (essentially, the declaration is moved further up in the program, from the smaller area of a block to the top of a function, somewhat implicitly). This can lead to unexpected program behavior, and in general it's safer and simpler to prefer `let`.
 
-# Boolean, hex, and octal literals
+# Binary, hex, and octal literals
 
 Numeric literals are most often used to represent decimal (base-10) values, but JavaScript numbers can also represent boolean (base-2) values, hexadecimal (base-16), and octal (base-8). In a number literal with base `x`, each digit from right to left represents an increasing power of `x`. In decimal, for example, `123 = 1*100 + 2*10 + 3*1`. In boolean, the only valid digits are 0 and 1, and these literals are written like `0b1010` (10). Hexadecimal digits range between 0 and 15, and digits 10-15 are represented by the characters A, B, C, D, E, and F, respectively. Hex literals look like `0xF` (15) or `0x2A` (42). Octal digits range between 0 and 7, and literals are written like `0o10` (8) or `0o21` (17).
 
