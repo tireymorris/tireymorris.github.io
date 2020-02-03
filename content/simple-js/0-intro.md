@@ -26,7 +26,7 @@ Thanks for reading!
 
 - Variables (let, const, var)
 
-- Boolean/octal/hex literals
+- Binary/octal/hex literals
 
 - Scientific notation
 
@@ -60,9 +60,7 @@ Thanks for reading!
 
 ---
 
-## Control Flow
-
-<!-- <h2 id="control-flow"><a href="/#/posts/simple-js-04-control-flow" target="_blank">Control Flow</a></h2> -->
+<h2 id="control-flow"><a href="/#/posts/simple-js-04-control-flow" target="_blank">Control Flow</a></h2>
 
 - Conditionals (if, else if, else, ternary)
 

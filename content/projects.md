@@ -1,6 +1,6 @@
 ## [propolis](https://github.com/tireymorris/propolis)
 
-Markdown-focused blog platform built in Preact (used to build this website!)
+Markdown-focused blog platform built in Preact and TypeScript (used to build this website!)
 
 ## [opencvbot](https://github.com/tireymorris/opencvbot)
 
