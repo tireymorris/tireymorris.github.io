@@ -22,3 +22,23 @@ a {
 code {
   background-color: #545757;
 }
+
+/* Only for lare screens */
+@media screen and (min-width: 501px) {
+  p,
+  a {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    padding-right: 2rem;
+  }
+
+  a:hover {
+    color: #6dc0d5;
+  }
+
+  pre code {
+    font-size: 1.5rem;
+  }
+}
