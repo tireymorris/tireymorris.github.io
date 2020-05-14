@@ -9,6 +9,11 @@
     "id": "posts",
     "posts": [
       {
+        "name": "05/14/2020 - Arch Linux Installation Guide",
+        "id": "arch-linux-guide",
+        "filepath": "content/posts/1-arch_setup.md"
+      },
+      {
         "name": "12/30/19 * Simple JS - Functions",
         "id": "simple-js-03-functions",
         "filepath": "content/simple-js/03-functions.md"
