@@ -50,14 +50,9 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 ### Bootloader
 
-(I'm choosing rEFInd here, as it's simple to configure and maintain)
+(I'm choosing systemd-boot here, as it's simple to configure and maintain)
 
-1. `pacman -S refind && refind-install`
-2. Update rEFInd config file (`/boot/refind_linux.conf`)
-   - delete the first two entries
-   - reformat the third entry to resemble `"Boot using default options" "root=UUID=$ROOT_UUID rw quiet splash"`
-     - note: the root UUID should already be present in this line
-
+`bootctl --path=/boot update`
 ### Wrapping up
 
 Fin! You can exit chroot and reboot now. Enjoy the installation!
