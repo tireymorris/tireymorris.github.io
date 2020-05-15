@@ -52,7 +52,7 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 (I'm choosing systemd-boot here, as it's simple to configure and maintain)
 
-`bootctl --path=/boot update`
+`bootctl --path=/boot install`
 ### Wrapping up
 
 Fin! You can exit chroot and reboot now. Enjoy the installation!
