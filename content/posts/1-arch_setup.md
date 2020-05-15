@@ -16,10 +16,10 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 1. First, use `lsblk` to see which block devices are available for installation.
 2. Then, run `cgdisk /dev/$DEVICE` to start up the cgdisk interface.
-   - Select `New` and create boot sector of size `512M` with code `ef00`, name it `boot`
-   - create swap of size `4G` with code `8200`, name it `swap`
-   - use the rest of the space with code `8300` and name it `root`
-   - select `Write` then `Quit`
+   * Select `New` and create boot sector of size `512M` with code `ef00`, name it `boot`
+   * Create swap of size `4G` with code `8200`, name it `swap`
+   * Use the rest of the space with code `8300` and name it `root`
+   * Select `Write` then `Quit`
 3. `lsblk` again to confirm the changes were made
 4. Format the partitions - `ext4` for root and `FAT32` for boot
    - `mkfs.fat -F 32 /dev/$BOOT`
