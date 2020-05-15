@@ -55,7 +55,7 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 1. `pacman -S refind && refind-install`
 2. Update rEFInd config file (`/boot/refind_linux.conf`)
    - delete the first two entries
-   - reformat the third entry to resemble `"Boot using default options" "root=PARTUUID=$ROOT_UUID rw quiet splash"`
+   - reformat the third entry to resemble `"Boot using default options" "root=UUID=$ROOT_UUID rw quiet splash"`
      - note: the root UUID should already be present in this line
 
 ### Wrapping up
