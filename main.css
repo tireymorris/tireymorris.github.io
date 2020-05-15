@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #f0edee;
+  background-color: #3b413c;
 }
 
 pre code {
@@ -12,16 +12,17 @@ pre code {
 
 #content {
   font-family: 'Source Code Pro', monospace;
-  color: #3b413c;
+  color: #e1f2fe;
 }
 
 a {
-  color: #e0afa0;
+  color: #d6c9c9;
   font-weight: 700;
 }
 
 code {
-  background-color: #e0afa0;
+  background-color: #d6c9c9;
+  color: #3b413c;
 }
 
 /* Only for large screens */
