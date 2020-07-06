@@ -55,12 +55,12 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 1. Run `bootctl --path=/boot install`
 2. Create the file `/boot/loader/entries/arch.conf` with following contents:
 
-   ```
-   title arch
-   linux /vmlinuz-linux
-   initrd /initramfs-linux.img
-   options root=UUID=$UUID
-   ```
+```
+title arch
+linux /vmlinuz-linux
+initrd /initramfs-linux.img
+options root=UUID=$UUID
+```
 
 - Note: The root UUID can be found by running `lsblk -no UUID /dev/$ROOT`
 
