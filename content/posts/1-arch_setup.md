@@ -32,7 +32,7 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 ### Install and configure the basic system
 
-`pacstrap /mnt base base-devel linux linux-firmware linux-headers zsh dialog netctl vim openssh git sudo wget wpa_supplicant dhcpcd`
+`pacstrap /mnt base base-devel linux linux-firmware linux-headers zsh dialog vim openssh git sudo wget iwd dhcpcd`
 
 ### System configuration (mostly lifted from arch wiki)
 
