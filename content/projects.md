@@ -1,3 +1,7 @@
+## [gen-secret](https://github.com/tireymorris/gen-secret)
+
+NPM cli to generate secret keys using OpenSSl in hex or base64, with an arbitrary number of output bytes
+
 ## [propolis](https://github.com/tireymorris/propolis)
 
 Markdown-focused blog platform built in Preact and TypeScript (used to build this website!)
