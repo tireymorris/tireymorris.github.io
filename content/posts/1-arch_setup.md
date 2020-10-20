@@ -32,7 +32,7 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 ### Install and configure the basic system
 
-`pacstrap /mnt base base-devel linux linux-firmware linux-headers zsh dialog vim openssh git sudo wget iwd dhcpcd`
+`pacstrap /mnt base base-devel linux linux-firmware linux-headers zsh dialog vim openssh git sudo wget iwd dhcpcd python`
 
 ### System configuration (mostly lifted from arch wiki)
 
@@ -42,11 +42,12 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 3. Set the timezone, then run hwclock to generate `/etc/adjtime`, which contains descriptive information about the hardware mode clock setting and clock drift factor.
    - `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`
      - e.g. `ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime`
+4. Set the current time to the hardware clock
    - `hwclock --systohc`
-4. Generate the system locale
+5. Generate the system locale
    - Uncomment needed locales from `/etc/locale.gen`, then run `locale-gen`
-5. Set hostname: `hostnamectl set-hostname myhostname`
-6. Set the root password: `passwd`
+5. Set the root password: `passwd`
+6. Optionally, add a user: `useradd --create-home <username>`
 
 ### Bootloader
 
@@ -63,6 +64,13 @@ options root=UUID=$UUID
 ```
 
 - Note: The root UUID can be found by running `lsblk -no UUID /dev/$ROOT`
+
+### Post-installation
+
+Some cleanup tasks I like to do after the system reboots:
+
+- `sudo systemctl enable sshd && sudo systemctl start sshd`
+- `sudo systemctl enable dhcpcd && sudo systemctl start sshd`
 
 ### Wrapping up
 
