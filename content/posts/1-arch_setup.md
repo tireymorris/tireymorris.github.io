@@ -8,10 +8,6 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 (if no output, system is probably in BIOS mode)
 
-### Pre-installation housekeeping
-
-`timedatectl set-ntp true` (turn on datetime sync via Network Time Protocol)
-
 ### Create, format, and mount partitions
 
 1. First, use `lsblk` to see which block devices are available for installation.
@@ -38,16 +34,25 @@ I've been doing a lot of cross-platform development lately using Docker, and acc
 
 1. Generate an `fstab` file, which describes how to mount various filesystems on the system
    - `genfstab -U /mnt >> /mnt/etc/fstab`
-2. Change-root into the new system `arch-chroot /mnt`
+2. Change-root into the new system:
+   - `arch-chroot /mnt`
 3. Set the timezone, then run hwclock to generate `/etc/adjtime`, which contains descriptive information about the hardware mode clock setting and clock drift factor.
    - `ln -sf /usr/share/zoneinfo/Region/City /etc/localtime`
      - e.g. `ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime`
 4. Set the current time to the hardware clock
    - `hwclock --systohc`
-5. Generate the system locale
+5. Synchronize time with datetime servers
+   - `timedatectl set-ntp true`
+6. Generate the system locale
    - Uncomment needed locales from `/etc/locale.gen`, then run `locale-gen`
-5. Set the root password: `passwd`
-6. Optionally, add a user: `useradd --create-home <username>`
+7. Set the root password:
+   - `passwd`
+8. Optionally, add a user:
+   - `useradd --create-home <username>`
+   - `usermod -aG wheel <username>`
+   - `EDITOR=vim visudo`
+     - uncomment one of the lines containing the phrase `%wheel ALL=(ALL)`
+     - this allows members of group wheel to use sudo, with/without password
 
 ### Bootloader
 
